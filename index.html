@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Geolocation with google api</title>
+</head>
+<body>
+    <nav class="navbar navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Geolocation with google API</a>
+      <a class="navbar-brand pull-right" target="_branch" href="https://developers.google.com/maps/documentation/javascript/get-api-key">get your API key</a>
+    </nav>
+    
+    <div class="row">
+      <div class="col-md-3 left-pane">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control address" id="address" placeholder="Address">
+          <div class="input-group-append">
+            <button class="btn btn-primary btn-address" type="button" id="button-addon2">Find</button>
+          </div>
+        </div>
+    
+        <div class="input-group mb-3">
+          <input type="text" class="form-control coordinates" id="coordinates" placeholder="Coordinates">
+          <div class="input-group-append">
+            <button class="btn btn-primary btn-coordinates" type="button" id="button-addon2">Find</button>
+          </div>
+        </div>
+    
+        <div class="input-group mb-3 pull-down">
+          <button class="btn btn-primary btn-block btn-get-current-location" type="button" id="button-addon2">Get my current
+            location</button>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="map" id="map"></div>
+        <div class="spinner-window">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-9"><h1 class="footer-content"></h1></div>
+      </div>
+    </div>
+
+    <script src="js/map.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsPc92ZcMDHK2wx3zgcu8ysBQVCOfBCSE&callback=initMap"
+        type="text/javascript"></script>
+</body>
+</html>
+
+<!-- 'defer' attribute defines a script that will not run until after the page has loaded: -->
+<!-- 'async' attribute defines a script that will be run asynchronously as soon as it is available -->

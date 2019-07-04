@@ -1,0 +1,44 @@
+.row {
+  height: 80vh;
+}
+
+
+.input-group {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.pull-down {
+  margin-top: 20rem;
+}
+
+.footer {
+  padding-top: 2rem;
+  height: 15vh;
+  background-color: #80bdff;
+}
+
+.footer-content {
+  text-align: center;
+  color: white;
+}
+
+.spinner-window {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 99%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.spinner-border {
+  display: block;
+}
+
+.map {
+  height: 100%;
+}
